@@ -12,6 +12,7 @@ puts 'Cleaning database...'
 Ingredient.destroy_all
 
 puts 'Creating ingredients...'
+puts 'Creating cocktails...'
 
 url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 drinks_serialized = open(url).read
@@ -22,4 +23,24 @@ drinks["drinks"].each do |drink|
   Ingredient.create(name: "#{drink["strIngredient1"]}")
 end
 
-puts 'Finished!'
+cocktails_attributes = [
+  {
+    name:                'Mojito',
+  },
+  {
+    name:                'Caïpirinha',
+  },
+  {
+    name:                'Cuba Libre',
+  },
+  {
+    name:                'White Russian',
+  },
+  {
+    name:                'Planteur',
+  }
+]
+
+Cocktail.create!(cocktails_attributes)
+
+puts 'Finished! Cocktails & ingredients have been created!'
