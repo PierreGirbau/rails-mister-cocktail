@@ -2,12 +2,14 @@
   <h1><%= @cocktail.name %></h1>
   <ul>
     <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.description %></li>
+    <li><%= dose.description %> of <%= dose.ingredient.name %></li>
+    <%= link_to 'Delete dose', dose_path(dose), method: :delete,
+      data: { confirm: "Are you sure?" }, class: "btn btn-primary" %>
     <% end %>
   </ul>
 
   <%= link_to 'Back', cocktails_path, class: "btn btn-primary" %> |
-  <%= link_to 'Add a description', new_cocktail_dose_path(@cocktail) %> |
+  <%= link_to 'Add a description', new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %> |
   <hr>
 
   </div>

@@ -2,6 +2,7 @@
 <%= simple_form_for([@cocktail, @dose]) do |f| %>
   <%= f.error_notification %>
     <%= f.input :description %>
+    <%= f.association :ingredient %>
     <%= f.submit class: "btn btn-primary"%>
 <% end %>
 </div>
