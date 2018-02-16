@@ -1,15 +1,16 @@
+<%= render 'shared/banner' %>
 <div class="container">
   <h1>All cocktails</h1>
-  <div class="row">
+  <div class="row" id="anchor">
       <!-- insert <div class="card"> -->
     <% @cocktails.each do |cocktail| %>
     <div class="col-xs-12 col-sm-4">
       <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-        <div class="card-category"><%= link_to cocktail.name, cocktail, class: "btn btn-primary" %></div>
+        <div class="card-category"></div>
         <div class="card-description">
           <h2><%= cocktail.name %></h2>
         </div>
-        <a class="card-link" href="#" ></a>
+        <%= link_to "", cocktail_path(cocktail), class: "card-link"%>
       </div>
     </div>
     <% end %>
