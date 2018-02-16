@@ -34,11 +34,6 @@ cocktail = Cocktail.new(name: 'Bloody Mary')
 cocktail.remote_photo_url = url
 cocktail.save
 
-url = "http://img.facv.pmdstatic.net/fit/http.3A.2F.2Fdata.2Evodemotion.2Ecom.2F31828.2F31828.2Ejpg/1280x720/quality/80/recette-cocktail-le-ti-punch.jpg"
-cocktail = Cocktail.new(name: 'Ti Punch')
-cocktail.remote_photo_url = url
-cocktail.save
-
 url = "http://img-3.journaldesfemmes.fr/zCAYuSqJpy8SEKKK4ao5oLaSqRI=/750x/smart/35fab4d44e9c4172b7228794f654ea02/recipe-jdf/10025521.jpg"
 cocktail = Cocktail.new(name: 'Caïpirinha')
 cocktail.remote_photo_url = url
@@ -61,6 +56,11 @@ cocktail.save
 
 url = "https://images.unsplash.com/photo-1414450397866-85f90db48714?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fdff95435109c814de8b1bb4b468abd3&auto=format&fit=crop&w=1050&q=80"
 cocktail = Cocktail.new(name: 'Planteur')
+cocktail.remote_photo_url = url
+cocktail.save
+
+url = "http://img.facv.pmdstatic.net/fit/http.3A.2F.2Fdata.2Evodemotion.2Ecom.2F31828.2F31828.2Ejpg/1280x720/quality/80/recette-cocktail-le-ti-punch.jpg"
+cocktail = Cocktail.new(name: 'Ti Punch')
 cocktail.remote_photo_url = url
 cocktail.save
 
