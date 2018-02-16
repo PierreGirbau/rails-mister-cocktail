@@ -9,6 +9,8 @@ ruby '2.4.3'
 
 # Cloudinary gems
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 # Front-end gems
 gem 'bootstrap-sass'
