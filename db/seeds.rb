@@ -9,6 +9,7 @@ require 'json'
 require 'open-uri'
 
 puts 'Cleaning database...'
+Dose.destroy_all
 Ingredient.destroy_all
 
 puts 'Creating ingredients...'
@@ -22,26 +23,6 @@ drinks["drinks"].each do |drink|
   drink["strIngredient1"]
   Ingredient.create(name: "#{drink["strIngredient1"]}")
 end
-
-# cocktails_attributes = [
-#   {
-#     name:                'Mojito',
-#   },
-#   {
-#     name:                'Caïpirinha',
-#   },
-#   {
-#     name:                'Cuba Libre',
-#   },
-#   {
-#     name:                'White Russian',
-#   },
-#   {
-#     name:                'Planteur',
-#   }
-# ]
-
-# Cocktail.create!(cocktails_attributes)
 
 url = "https://images.unsplash.com/photo-1510626176961-4b57d4fbad03?ixlib=rb-0.3.5&s=4e9face33a62237d5846e32db4fa114e&auto=format&fit=crop&w=634&q=80"
 cocktail = Cocktail.new(name: 'Mojito')
@@ -89,3 +70,23 @@ cocktail.remote_photo_url = url
 cocktail.save
 
 puts 'Finished! Cocktails & ingredients have been created!'
+
+# cocktails_attributes = [
+#   {
+#     name:                'Mojito',
+#   },
+#   {
+#     name:                'Caïpirinha',
+#   },
+#   {
+#     name:                'Cuba Libre',
+#   },
+#   {
+#     name:                'White Russian',
+#   },
+#   {
+#     name:                'Planteur',
+#   }
+# ]
+
+# Cocktail.create!(cocktails_attributes)
