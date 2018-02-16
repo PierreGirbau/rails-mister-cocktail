@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem '2.4.3'
+ruby '2.4.3'
 
 # Front-end gems
 gem 'bootstrap-sass'
